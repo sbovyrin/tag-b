@@ -26,18 +26,3 @@ let tagB = (fn => {
 })(React.createElement);
 
 export default tagB;
-
-// let {div, button} = tagB;
-// function MyComp() {
-//   const [counter, setCounter] = React.useState(0);
-
-//   return div([
-//     div(counter),
-//     button('+1', {onClick: () => setCounter(counter + 1)})
-//   ]);
-// }
-
-// ReactDOM.render(
-//   tagB.html(MyComp),
-//   document.querySelector('#root')
-// );

@@ -1,5 +1,8 @@
 # Tag Builder
 
+![version](https://img.shields.io/npm/v/tag-b?color=green&style=flat-square)
+![downloads](https://img.shields.io/npm/dy/tag-b?color=blueviolet&style=flat-square)
+
 Build your HTML-page using functions those represent a HTML tag.
 
 > Works with React only (library-agnostic Work in Progress)
