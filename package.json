@@ -1,0 +1,27 @@
+{
+  "name": "tag-b",
+  "version": "1.0.0",
+  "main": "dist/tag-b.cjs.js",
+  "module": "dist/tag-b.esm.js",
+  "browser": "dist/tag-b.umd.js",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^11.0.1",
+    "@rollup/plugin-node-resolve": "^7.0.0",
+    "rollup": "^1.29.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "test": "node test/test.js",
+    "pretest": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "react": "^16.13.1"
+  }
+}
