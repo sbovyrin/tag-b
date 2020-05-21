@@ -7,12 +7,28 @@
 
 Build your HTML-page using functions those represent a HTML tag.
 
+
+```
+├── tag-b.cjs.min.js (559 bytes)
+├── tag-b.esm.min.js (546 bytes)
+└── tag-b.umd.min.js (742 bytes)
+```
+
 ## Getting Started
 
+Consider example of using this library with React.js 
+
 ```javascript
+import ReactDOM from 'react-dom';
+import React from 'react';
 import tagB from 'tag-b';
 
-const {div, h1, p, html} = tagB(React.createElement);
+// pass functions that creates a HTML tag
+const {div, h1, p, html} = tagB(React.createElement); 
+
+function MyComponent(props) {
+  return h1('This is My Component', props);
+}
 
 ReactDOM.render(
   div(
@@ -21,12 +37,23 @@ ReactDOM.render(
         h1('This is heading', {className: 'my-super-style'}),
         p('This is my paragraph, long-long-long-long-long')
       ]),
-      html(YourReactComponent, '', {prop1: 'value1', prop2: someValues}),
+      html(MyComponent, '', {className: 'my-component-style', id: 'my-component'}),
     ],
     {className: 'wrapper'}
   ),
   document.querySelector('#root')
 );
+```
+
+The code above renders:
+```html
+<div class="wrapper">
+  <div>
+    <h1 class="my-super-style">This is heading</h1>
+    <p>This is my paragraph, long-long-long-long-long</p>
+  </div>
+  <h1 class="my-component-style" id="my-component">This is My Component</h1>
+</div>
 ```
 
 ## Using 
