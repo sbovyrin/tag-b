@@ -1,5 +1,6 @@
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
+import { terser } from "rollup-plugin-terser";
 import pkg from './package.json';
 
 export default [
@@ -12,15 +13,18 @@ export default [
     },
     plugins: [
       resolve(),
-      commonjs()
+      commonjs(),
+      terser()
     ]
   },
   {
     input: 'src/tag-b.js',
-    external: ['react'],
     output: [
       {file: pkg.main, format: 'cjs'},
       {file: pkg.module, format: 'es'}
+    ],
+    plugins: [
+      terser()
     ]
   }
 ];

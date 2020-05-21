@@ -2,16 +2,17 @@
 
 ![version](https://img.shields.io/npm/v/tag-b?color=green&style=flat-square)
 ![downloads](https://img.shields.io/npm/dy/tag-b?color=blueviolet&style=flat-square)
+![size](https://img.shields.io/bundlephobia/min/tag-b?style=flat-square)
+![license](https://img.shields.io/npm/l/tag-b?style=flat-square)
 
 Build your HTML-page using functions those represent a HTML tag.
-
-> Works with React only (library-agnostic Work in Progress)
 
 ## Getting Started
 
 ```javascript
-// your other imports ...
-import {html, div, h1, p} from 'tag-b';
+import tagB from 'tag-b';
+
+const {div, h1, p, html} = tagB(React.createElement);
 
 ReactDOM.render(
   div(
@@ -28,7 +29,7 @@ ReactDOM.render(
 );
 ```
 
-## Function structure 
+## Using 
 
 ### Build a tag using common function
 
@@ -36,11 +37,12 @@ ReactDOM.render(
 html(tag, content, attributes)
 ```
 
-### Build a tag
+### Build a specific tag
 
 ```javascript
 tag(content, attributes)
 ```
+- here `tag` is a HTML tag name (i.e. `<div>`, `<h1>` and etc.) 
 
 ## Supported HTML tags
 - `<div>` `<span>` `<article>` `<main>` `<section>` `<header>` `<footer>` `<nav>`
@@ -51,3 +53,7 @@ tag(content, attributes)
 - `<img>` `<figure>` `<figcaption>` `<audio>` `<video>`
 - `<table>` `<tbody>` `<thead>` `<tfoot>` `<tr>` `<th>` `<td>` `<caption>`
 - `<hr>` `<br>`
+
+### TODO
+- [ ] Support all HTML-tags
+- [ ] Improve tags composition
