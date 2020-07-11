@@ -6,7 +6,7 @@ module.exports = (function() {
       return args[fn];
     }
 
-    console.log('one');
+    console.log('[tag-b]: Build functions...');
     let tags = [
       'div', 'span',
       'article', 'main', 'section', 'header', 'footer', 'nav',
@@ -27,7 +27,7 @@ module.exports = (function() {
         fns[tag] = (content, attrs = {}) => html(tag, content, attrs);
         return fns;
       },
-      {html: html}
+      {tag: html}
     );
 
     return args[fn];

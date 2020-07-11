@@ -1,6 +1,6 @@
 let tagB = require('./tag-b');
 
-// fake fn 
+// fake fn tag render 
 function createTag(tag, attrs, content) {
   return attrs.id 
     ? `<${tag} id="${attrs.id}">${content}</${tag}>`
