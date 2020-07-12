@@ -1,4 +1,5 @@
-let tagB = require('./tag-b');
+import tagB from './tag-b.js';
+
 
 // fake fn tag render 
 function createTag(tag, attrs, content) {

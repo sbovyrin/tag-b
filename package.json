@@ -1,45 +1,45 @@
 {
-  "name": "tag-b",
-  "description": "Build your HTML-page using functions those represent a HTML tag",
-  "version": "1.0.3",
-  "keywords": [
-    "HTML",
-    "tag builder",
-    "template",
-    "view",
-    "html tag"
-  ],
-  "homepage": "https://github.com/sbovyrin/tag-b#readme",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/sbovyrin/tag-b.git"
-  },
-  "bugs": {
-    "url": "https://github.com/sbovyrin/tag-b/issues",
-    "email": "sbovyrin@gmail.com"
-  },
-  "license": "GPL-3.0",
-  "author": {
-    "name": "Sergey Bovyrin",
-    "email": "sbovyrin@gmail.com"
-  },
-  "main": "dist/tag-b.cjs.min.js",
-  "module": "dist/tag-b.esm.min.js",
-  "browser": "dist/tag-b.umd.min.js",
-  "devDependencies": {
-    "@rollup/plugin-commonjs": "^11.0.1",
-    "@rollup/plugin-node-resolve": "^7.0.0",
-    "jest": "^26.0.1",
-    "rollup": "^1.29.0",
-    "rollup-plugin-terser": "^5.3.0"
-  },
-  "scripts": {
-    "build": "rollup -c",
-    "dev": "rollup -c -w",
-    "test": "jest",
-    "pretest": "npm run build"
-  },
-  "files": [
-    "dist"
-  ]
+    "name": "tag-b",
+    "description": "Build your HTML-page using functions those represent a HTML tag",
+    "type": "module",
+    "version": "1.0.4",
+    "keywords": [
+        "HTML",
+        "tag builder",
+        "template",
+        "view",
+        "html tag"
+    ],
+    "homepage": "https://github.com/sbovyrin/tag-b#readme",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/sbovyrin/tag-b.git"
+    },
+    "bugs": {
+        "url": "https://github.com/sbovyrin/tag-b/issues",
+        "email": "sbovyrin@gmail.com"
+    },
+    "license": "GPL-3.0",
+    "author": {
+        "name": "Sergey Bovyrin",
+        "email": "sbovyrin@gmail.com"
+    },
+    "main": "dist/tag-b.esm.min.js",
+    "devDependencies": {
+        "jest": "^26.1.0",
+        "rollup": "^1.29.0",
+        "rollup-plugin-terser": "^5.3.0"
+    },
+    "scripts": {
+        "build": "rollup -c",
+        "dev": "rollup -c -w",
+        "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+    },
+    "files": [
+        "dist"
+    ],
+    "jest": {
+        "testEnvironment": "jest-environment-node",
+        "transform": {}
+    }
 }

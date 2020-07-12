@@ -1,4 +1,4 @@
-module.exports = (function() {
+let tagB = (function() {
   let args = {};
 
   return fn => {
@@ -32,4 +32,6 @@ module.exports = (function() {
 
     return args[fn];
   }
-})()
+})();
+
+export default tagB;

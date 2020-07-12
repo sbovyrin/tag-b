@@ -1,18 +1,16 @@
-# Tag Builder
+# Tag Builder ([!] 577 bytes)
 
 ![version](https://img.shields.io/npm/v/tag-b?color=green&style=flat-square)
 ![downloads](https://img.shields.io/npm/dy/tag-b?color=blueviolet&style=flat-square)
 ![size](https://img.shields.io/bundlephobia/min/tag-b?style=flat-square)
 ![license](https://img.shields.io/npm/l/tag-b?style=flat-square)
 
+
+**Doesn't yet ready for production**
+
+
 Build your HTML-page using functions those represent a HTML tag.
 
-
-```
-├── tag-b.cjs.min.js (559 bytes)
-├── tag-b.esm.min.js (546 bytes)
-└── tag-b.umd.min.js (742 bytes)
-```
 
 ## Getting Started
 
@@ -21,10 +19,11 @@ Consider example of using this library with React.js
 ```javascript
 import ReactDOM from 'react-dom';
 import React from 'react';
+
 import tagB from 'tag-b';
 
 // pass functions that creates a HTML tag
-const {div, h1, p, html} = tagB(React.createElement); 
+const { div, h1, p, tag } = tagB(React.createElement); 
 
 function MyComponent(props) {
   return h1('This is My Component', props);
@@ -61,15 +60,21 @@ The code above renders:
 ### Build a tag using common function
 
 ```javascript
-html(tag, content, attributes)
+tag(tagName, content, attributes)
+
+// example
+tag('iframe', '', {src: 'url'}); // -> <iframe src="url"></iframe>
 ```
 
 ### Build a specific tag
 
 ```javascript
-tag(content, attributes)
+tagName(content, attributes)
+
+// example
+h1('Hello, world!'); // -> <h1>Hello, world!</h1>
 ```
-- here `tag` is a HTML tag name (i.e. `<div>`, `<h1>` and etc.) 
+- here `tagName` is a HTML tag name (i.e. `<div>`, `<h1>` and etc.) 
 
 ## Supported HTML tags
 - `<div>` `<span>` `<article>` `<main>` `<section>` `<header>` `<footer>` `<nav>`
@@ -82,5 +87,4 @@ tag(content, attributes)
 - `<hr>` `<br>`
 
 ### TODO
-- [ ] Support all HTML-tags
 - [ ] Improve tags composition
