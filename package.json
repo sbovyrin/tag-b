@@ -24,7 +24,7 @@
         "name": "Sergey Bovyrin",
         "email": "sbovyrin@gmail.com"
     },
-    "main": "dist/tag-b.esm.min.js",
+    "module": "dist/tag-b.esm.min.js",
     "devDependencies": {
         "jest": "^26.1.0",
         "rollup": "^1.29.0",
